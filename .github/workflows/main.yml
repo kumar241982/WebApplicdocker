@@ -28,4 +28,4 @@ jobs:
         context: .
         file: ./WebApplication1/Dockerfile
         push: true
-        tags: yourdockerhubusername/webapplication1:latest
+        tags: kkausha/webapplication1:latest
