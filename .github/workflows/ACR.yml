@@ -1,9 +1,7 @@
 name: Build and Push Versioned Docker Image to ACR
 
 on:
-  push:
-    branches: [ master ]
-  workflow_dispatch:
+   workflow_dispatch:
     inputs:
       version:
         description: 'Image version tag (e.g., v1.0.0)'
@@ -35,5 +33,6 @@ jobs:
         file: ./WebApplication1/Dockerfile
         push: true
         tags: |
-          Acrtest24101982.azurecr.io/webapplication1:latest
-          Acrtest24101982.azurecr.io/webapplication1:${{ github.event.inputs.version }}
+            Acrtest24101982.azurecr.io/webapplication1:latest
+            Acrtest24101982.azurecr.io/webapplication1:${{ env.VERSION }}
+
